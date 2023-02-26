@@ -1,1 +1,1 @@
-This is just my personal notes
+# This is just my personal notes
