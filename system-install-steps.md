@@ -38,3 +38,4 @@ This installs key into gpg, and then you should be able to clone repos using thi
 ### 5. git clone git@github.com:alfonz19/mmucha-linux-conf-and-scripts.git /home/mmucha/.env-scr
 ### 6. git clone git@github.com:alfonz19/notes.git /home/mmucha/adocNotes
 
+### 7. go into both repos from step 5 and 6, do `git-crypt unlock` and continue with _install.adoc file 
