@@ -5,7 +5,7 @@
 ### 2. apt update -y && apt upgrade -y
 ### 3. install base programs to be able to bootstrap scripts
 
-    apt install curl git git-crypt gpg 
+    apt install curl git git-crypt gpg ssh
 
 if `gpg --card-status` (try also issue command list) complaints about smartcard daemon, like for example:
 
@@ -15,7 +15,7 @@ you are missing scdaemon (and maybe also: pcscd gnupg2 pcsc-tools) and in that c
 
     apt install scdaemon pcscd gnupg2 pcsc-tools
 
-### 4. make yubikey work 
+### 4a. in case you have yubikey with ssh: make yubikey work 
    . Add into .bashrc
 
     export GPG_TTY=$(tty)
@@ -33,6 +33,12 @@ and issue command fetch. If that does not work, issue
     gpg --keyserver keyserver.ubuntu.com --recv-keys "4AC2 6441 33C8 3D01 1725  D256 EE59 DA2C 892A 0445"
 
 This installs key into gpg, and then you should be able to clone repos using this private key and decrypt its contents
+
+### 4b. in case you don't
+
+    . import id_rsa and id_rsa.pub from older machine OR register new one in githubs from step 5 and 6
+
+    . you will still need to decrypt them, and to do that, you still need to use gpg key which is in your other machine, backup flashdrive or on yubikey.
 
 
 ### 5. git clone git@github.com:alfonz19/mmucha-linux-conf-and-scripts.git /home/mmucha/.env-scr
