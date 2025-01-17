@@ -41,7 +41,12 @@ This installs key into gpg, and then you should be able to clone repos using thi
     . you will still need to decrypt them, and to do that, you still need to use gpg key which is in your other machine, backup flashdrive or on yubikey.
 
 
-### 5. git clone git@github.com:alfonz19/mmucha-linux-conf-and-scripts.git /home/mmucha/.env-scr
-### 6. git clone git@github.com:alfonz19/notes.git /home/mmucha/adocNotes
+### 5. clone scripts
+
+    git clone git@github.com:alfonz19/mmucha-linux-conf-and-scripts.git ~/.env-scr
+
+### 6. clone personal notes
+
+    git clone git@github.com:alfonz19/notes.git ~/adocNotes
 
 ### 7. go into both repos from step 5 and 6, do `git-crypt unlock` and continue with _install.adoc file 
